@@ -1,0 +1,17 @@
+﻿@page "/roster"
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+<PageTitle>Roster</PageTitle>
+<h1>Roster</h1>
+<p>Blackhawks 2024/25 Roster</p>
+
+<QuickGrid Title="Roster" Items="Players">
+    <PropertyColumn Title="Name" Property="@(p => p.FullName)" Sortable="true" />
+    <PropertyColumn Title="#" Property="@(p => p.DisplayShirtNumber)" Sortable="true"/>
+    <PropertyColumn Title="Pos" Property="@(p => p.Position)" Sortable="true" />
+    <PropertyColumn Title="Sh/Ca" Property="@(p => p.Shoots)" Sortable="true" />
+    <PropertyColumn Title="Ht" Property="@(p => p.DisplayHeight)" Sortable="true" />
+    <PropertyColumn Title="Wt" Property="@(p => p.DisplayWeight)" Sortable="true" />
+    <PropertyColumn Title="Born" Property="@(p => p.DisplayAge)" Sortable="true" />
+    <PropertyColumn Title="Birthplace" Property="@(p => p.Birthplace)" Sortable="true" />
+</QuickGrid>
