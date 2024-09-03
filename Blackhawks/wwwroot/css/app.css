@@ -10,6 +10,11 @@ a, .btn-link {
     color: #0071c1;
 }
 
+div.main-article-content {
+    margin-left:5%;
+    margin-right: 5%;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -100,4 +105,8 @@ a, .btn-link {
 
 code {
     color: #c02d76;
+}
+
+.heading-center {
+    text-align: center;
 }
