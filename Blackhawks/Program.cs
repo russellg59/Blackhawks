@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Blackhawks;
-using Blackhawks.DataAccess;
 using Blackhawks.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);

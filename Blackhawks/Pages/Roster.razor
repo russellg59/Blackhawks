@@ -13,21 +13,43 @@
 	tr:nth-child(even) {
 		background-color: gainsboro;
 	}
+
+	.btn-group-bar {
+		background: black;
+		padding: 5px;
+		border: 2px solid black;
+		border-radius: 5px;
+	}
 </style>
 
 <PageTitle>Roster</PageTitle>
 
 <h1 class="heading-center">Blackhawks 2024/25 Roster</h1>
-
+<div class="row main-article-content" style="margin-bottom: 10px;">
+	<div class="btn-group btn-group-bar" role="group">
+		<button type="button" 
+		        class="btn btn-primary btn-lg @(FilterTag == AllPlayersFilterTag ?  "btn-selected" : "")" 
+		        @onclick="OnAllButtonClicked">All Players</button>
+		<button type="button" 
+		        class="btn btn-primary btn-lg @(FilterTag == ForwardsFilterTag ?  "btn-selected" : "")" 
+		        @onclick="OnForwardsButtonClicked">Forwards</button>
+		<button type="button" 
+		        class="btn btn-primary btn-lg @(FilterTag == DefendersFilterTag ?  "btn-selected" : "")" 
+		        @onclick="OnDefenceClicked">Defence</button>
+		<button type="button" 
+		        class="btn btn-primary btn-lg@(FilterTag == GoaliesFilterTag ?  "btn-selected" : "")" 
+		        @onclick="OnNetmindersClicked">Netminders</button>
+</div>
+</div>
 <div class="row main-article-content">
-	<QuickGrid Title="Roster" Items="Players">
-		<PropertyColumn Title="Name" Property="@(p => p.FullName)" Sortable="true" />
-		<PropertyColumn Title="#" Property="@(p => p.DisplayShirtNumber)" Sortable="true" />
-		<PropertyColumn Title="Pos" Property="@(p => p.Position)" Sortable="true" />
-		<PropertyColumn Title="Sh/Ca" Property="@(p => p.Shoots)" Sortable="true" />
-		<PropertyColumn Title="Ht" Property="@(p => p.DisplayHeight)" Sortable="true" />
-		<PropertyColumn Title="Wt" Property="@(p => p.DisplayWeight)" Sortable="true" />
-		<PropertyColumn Title="Born" Property="@(p => p.DisplayAge)" Sortable="true" />
-		<PropertyColumn Title="Birthplace" Property="@(p => p.Birthplace)" Sortable="true" />
+	<QuickGrid Title="Roster" Items="FilteredPlayersList">
+		<PropertyColumn Title="Name" Property="@(p => p.FullName)" Sortable="true"/>
+		<PropertyColumn Title="#" Property="@(p => p.DisplayShirtNumber)" Sortable="true"/>
+		<PropertyColumn Title="Pos" Property="@(p => p.Position)" Sortable="true"/>
+		<PropertyColumn Title="Sh/Ca" Property="@(p => p.Shoots)" Sortable="true"/>
+		<PropertyColumn Title="Ht" Property="@(p => p.DisplayHeight)" Sortable="true"/>
+		<PropertyColumn Title="Wt" Property="@(p => p.DisplayWeight)" Sortable="true"/>
+		<PropertyColumn Title="Born" Property="@(p => p.DisplayAge)" Sortable="true"/>
+		<PropertyColumn Title="Birthplace" Property="@(p => p.Birthplace)" Sortable="true"/>
 	</QuickGrid>
 </div>

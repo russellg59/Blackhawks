@@ -1,6 +1,6 @@
 ﻿using Blackhawks.Dto;
 
-namespace Blackhawks.DataAccess;
+namespace Blackhawks.Services;
 
 public interface IPlayerService
 {
