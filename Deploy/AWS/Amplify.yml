@@ -1,0 +1,19 @@
+﻿version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+      - 'curl -sSL https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh'
+      - 'chmod +x dotnet-install.sh'
+      - './dotnet-install.sh -Channel 8.0'
+      - 'export PATH=$PATH:/root/.dotnet'
+    build:
+      commands:
+      - 'dotnet publish -c Release -o release'
+    artifacts:
+      baseDirectory: release/wwwroot
+      files:
+      - '**/*'
+      - ../web.config
+    cache:
+      paths: []

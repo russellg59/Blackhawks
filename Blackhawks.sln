@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35209.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackhawks", "Blackhawks\Blackhawks.csproj", "{D5C75FEF-2FD3-489A-86F3-6A28D13EDBD8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{8C850043-5E87-428C-B937-6FF9203B2899}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AWS", "AWS", "{FBC3285E-7935-4926-AED0-227DD8ED329A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBC3285E-7935-4926-AED0-227DD8ED329A} = {8C850043-5E87-428C-B937-6FF9203B2899}
 	EndGlobalSection
 EndGlobal
