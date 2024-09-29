@@ -1,0 +1,33 @@
+﻿<Window x:Class="BlackhawksData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackhawksData"
+        xmlns:viewModels="clr-namespace:BlackhawksData.ViewModels"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewModels:IMainWindowViewModel, IsDesignTimeCreatable=False}"
+        Title="BlackhawksDataManager" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File" Style="{StaticResource TopMenuItemStyle}">
+                <MenuItem Header="New Season" />
+                <MenuItem Header="Change Season" />
+                <Separator />
+                <MenuItem Header="E_xit" Command="{Binding ExitCommand}" />
+            </MenuItem>
+            <MenuItem Header="_Edit" Style="{StaticResource TopMenuItemStyle}">
+                
+            </MenuItem>
+        </Menu>
+        <DockPanel DockPanel.Dock="Bottom" Style="{StaticResource StatusBarStyle}" MinHeight="20">
+            <Label DockPanel.Dock="Left" Content="Current Season:" Style="{StaticResource StatusBarLabelStyle}" />
+            <Label DockPanel.Dock="Left" Content="{Binding CurrentSeason}" Style="{StaticResource StatusBarLabelValueStyle}" />
+            <Label DockPanel.Dock="Right" Content="{Binding VersionString, Mode=OneTime}" Style="{StaticResource StatusBarLabelValueStyle}" />
+            <Label DockPanel.Dock="Right" Content="Version:" Style="{StaticResource StatusBarLabelStyle}"/>
+        </DockPanel>
+        <Grid DockPanel.Dock="Top">
+            
+        </Grid>
+    </DockPanel>
+</Window>
