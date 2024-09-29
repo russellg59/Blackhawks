@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:BlackhawksData"
         mc:Ignorable="d"
         Title="BlackhawksData" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
 
-    </Grid>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                
+            </MenuItem>
+        </Menu>
+        <DockPanel DockPanel.Dock="Bottom" Style="{StaticResource StatusBarStyle}" MinHeight="20"></DockPanel>
+        <Grid DockPanel.Dock="Top">
+            
+        </Grid>
+    </DockPanel>
 </Window>

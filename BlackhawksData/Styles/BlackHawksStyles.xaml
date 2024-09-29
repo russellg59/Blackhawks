@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <SolidColorBrush x:Key="MenuForegroundBrush" Color="White" />
+    <SolidColorBrush x:Key="MenuBackgroundBrush" Color="Red" />
+    <SolidColorBrush x:Key="StatusBarForegroundBrush" Color="Gray" />
+    <SolidColorBrush x:Key="StatusBarBackgroundBrush" Color="Red" />
+    <Style TargetType="{x:Type Menu}">
+        <Setter Property="Foreground" Value="{StaticResource MenuForegroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource MenuBackgroundBrush}" />
+    </Style>
+    
+    <Style x:Key="StatusBarStyle" TargetType="DockPanel">
+        <Setter Property="Background" Value="{StaticResource StatusBarBackgroundBrush}" />
+    </Style>
+</ResourceDictionary>
