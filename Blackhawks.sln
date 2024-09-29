@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{8C8500
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AWS", "AWS", "{FBC3285E-7935-4926-AED0-227DD8ED329A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackhawksData", "BlackhawksData\BlackhawksData.csproj", "{4059FED8-4C07-408D-AAEE-FD7C21196A68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackhawksDataManager", "BlackhawksDataManager\BlackhawksDataManager.csproj", "{4059FED8-4C07-408D-AAEE-FD7C21196A68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

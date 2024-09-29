@@ -3,9 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BlackhawksData;
 
-internal static class ConfigureBlackhawksExtensions
+internal static class ConfigureBhdExtensions
 {
-    public static IServiceCollection AddBlackhawksData(this IServiceCollection services)
+    public static IServiceCollection AddBlackhawksDataManager(this IServiceCollection services)
     {
         services
             .AddSingleton<MainWindow>()
