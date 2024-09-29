@@ -13,11 +13,12 @@ public partial class App : Application
     public App()
     {
         var services = new ServiceCollection();
-        _ = services.AddBlackhawksDataManager();
         
         var config = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json", optional: false)
             .Build();
+        
+        _ = services.AddBlackhawksDataManager(config);
 
         ConfigureLogging(config);
         
